@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gelateria La Romana</title>
+<meta name="description" content="Scopri tutto il gusto del buon gelato con Gelateria La Romana: la tua gelateria in franchising per un nuovo business nella tua città.">
+
+<!-- ============ FONT ============ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&family=Lobster&display=swap" rel="stylesheet">
+
+<!-- ============ CSS ============ -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="top">
+  <a class="logo" href="index.html">La Romana</a>
+
+  <!-- NAV BAR FISSA + MENU-->
+  <nav class="quick" aria-label="Accesso rapido">
+    <a href="https://www.gelateriaromana.com/it/cat0_6657-i-gusti-della-tradizione.php">I nostri gelati</a>
+    <a href="https://www.gelateriaromana.com/it/cat0_6644-la-nostra-pasticceria.php">Pasticceria</a>
+    <a href="https://www.gelateriaromana.com/showroom.php">Dove siamo</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<!-- ============ MENU (overlay) ============ -->
+<nav class="menu" id="menu" aria-label="Menu principale">
+  <ul class="menu-links">
+    <li><a href="https://www.gelateriaromana.com/">Home</a></li>
+    <li><a href="https://www.gelateriaromana.com/gli-ingredienti.php">Ingredienti</a></li>
+    <li><a href="https://www.gelateriaromana.com/storia.php">Storia</a></li>
+    <li><a href="https://www.gelateriaromana.com/franchising.php">Franchising</a></li>
+    <li><a href="https://www.gelateriaromana.com/le-storie-di-emma.php">Le storie di Emma</a></li>
+    <li><a href="https://www.gelateriaromana.com/it/news.php">News</a></li>
+    <li><a href="https://www.gelateriaromana.com/eventi.php">Eventi</a></li>
+    <li><a href="https://www.gelateriaromana.com/formazione.php">Lavora con noi</a></li>
+    <li><a href="https://www.gelateriaromana.com/contatti.php">Contatti</a></li>
+  </ul>
+  <div class="menu-side">
+    <p class="menu-label">Lingua</p>
+    <p class="langs">
+      <a href="https://www.gelateriaromana.com/" aria-current="true">IT</a>
+      <a href="https://www.gelateriaromana.com/en/">EN</a>
+      <a href="https://www.gelateriaromana.com/es/">ES</a>
+      <a href="https://www.gelateriaromana.com/de/">DE</a>
+      <a href="https://www.gelateriaromana.com/ar/">AR</a>
+      <a href="https://www.gelateriaromana.com/ro/">RO</a>
+      <a href="https://www.gelateriaromana.com/pt/">PT</a>
+      <a href="https://www.gelateriaromana.com/fr/">FR</a>
+    </p>
+    <p><a href="https://it.gelateriaromana.com/">Blog</a></p>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ HERO: lo "scoop" che si allarga con lo scroll ============ -->
+<section class="hero" id="hero">
+  <div class="stage">
+    <h1 class="hero-title" aria-label="L'amore per il gelato dal 1947">
+      <span class="line"><span>L’amore</span></span>
+      <span class="line"><span>per il gelato</span></span>
+      <span class="line"><span>dal <em>1947</em></span></span>
+    </h1>
+
+    <div class="scoop" aria-hidden="true">
+      <!-- Foto hero alternate in automatico -->
+      <img class="on" src="https://www.gelateriaromana.com/source/home/1.jpg" alt="">
+      <img src="https://www.gelateriaromana.com/source/home/2.jpg" alt="">
+      <img src="https://www.gelateriaromana.com/source/home/3.jpg" alt="">
+      <img src="https://www.gelateriaromana.com/source/home/4.jpg" alt="">
+      <img src="https://www.gelateriaromana.com/source/home/5.jpg" alt="">
+    </div>
+
+    <p class="hero-caption">Rimini, dal 1947</p>
+    <p class="hero-hint">Scorri</p>
+  </div>
+</section>
+
+<!-- ============ PROPOSTE DEL MESE ============ -->
+<section class="month wrap">
+  <header class="sec-head" data-reveal>
+    <h2>Le nostre proposte del mese</h2>
+    <p>Disponibili in tutti i punti vendita</p>
+  </header>
+  <ul class="flavors">
+    <!-- Nome e colore (--c) -->
+    <li style="--c:#c9d6a3" data-reveal><a href=".../IMG/CINNAMON_ROLL.jpg"></a><span>CINNAMON ROLL</span></li>
+    <li style="--c:#e9b8a6" data-reveal><span>Nome del gusto</span></li>
+    <li style="--c:#d8c3a0" data-reveal><span>Nome del gusto</span></li>
+  </ul>
+</section>
+
+<!-- ============ BENVENUTI NEL GUSTO ============ -->
+<section class="story wrap">
+  <h2 data-reveal>Benvenuti<br>nel gusto</h2>
+  <div class="story-text" data-reveal>
+    <p class="lead">La gelateria La Romana nasce nel cuore del centro storico di Rimini nel 1947 prendendo il nome dalla figlia del primo proprietario e fondatore. Dopo pochi anni Vito Zucchi, capostipite della famiglia, rilevò l’attività e grazie alla sua fervida fantasia basandosi sui pochi ingredienti presenti allora realizzò una vasta gamma di gusti di <strong>qualità</strong>, ancora realizzati nei nostri punti vendita.</p>
+    <p>Per questo proponiamo gusti della tradizione fatti esclusivamente con prodotti selezionati, seguendo le antiche ricette di una volta.</p>
+  </div>
+</section>
+
+<!-- ============ CONSIGLI ============ -->
+<section class="advice wrap" data-reveal>
+  <p class="advice-quote">Per migliorare bisogna saper imparare dai propri errori. <a href="https://www.gelateriaromana.com/consigli.php">Aiutaci raccontandoci i nostri!</a></p>
+  <a class="btn" href="https://www.gelateriaromana.com/consigli.php">HELP! Abbiamo bisogno dei tuoi consigli</a>
+</section>
+
+
+<!-- ============ NEWS & EVENTI ============ -->
+<section class="news wrap">
+  <header class="sec-head" data-reveal><h2>News &amp; Eventi</h2></header>
+  <div class="news-grid">
+    <!-- Copia un <article> per aggiungere una news -->
+    <article data-reveal>
+      <a href="https://www.gelateriaromana.com/3-it-355862-pumpkin-crumble-pie-la-nuova-limited-edition-per-celebrare-l-autunno.php">
+        <div class="thumb"><img loading="lazy" src="https://www.gelateriaromana.com/inc/scripts/crop.php?img=https%3A%2F%2Fadmin.abc.sm%2Fimg%2Fgallery%2Fupload%2F233%2Fimg_lastminute_355862_1727702059.png&w=215&h=170&o=" alt="Frappè autunnale con decorazioni di zucca e crema."></div>
+        <h3>Pumpkin Crumble Pie: la nuova Limited Edition per celebrare l’autunno! 🎃🍂</h3>
+        <span class="more">Vedi tutto</span>
+      </a>
+    </article>
+    <article data-reveal>
+      <a href="https://www.gelateriaromana.com/3-it-353574-ve-piacere-di-conoscerti.php">
+        <div class="thumb"><img loading="lazy" src="https://www.gelateriaromana.com/inc/scripts/crop.php?img=https%3A%2F%2Fadmin.abc.sm%2Fimg%2Fgallery%2Fupload%2F233%2Fimg_lastminute_353574_1719925194.jpg&w=215&h=170&o=0" alt="Cinque coppette di gelato colorato con varie guarnizioni, invitanti e deliziose."></div>
+        <h3>VE’ – Piacere di Conoscerti</h3>
+        <span class="more">Vedi tutto</span>
+      </a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ LA ROMANA CARD ============ -->
+<section class="card-sec">
+  <div class="wrap card-inner">
+    <div data-reveal>
+      <h2>Richiedi subito la La Romana Card in gelateria!</h2>
+      <p>Card prepagata ricaricabile. Golosa idea regalo per tutte le occasioni!</p>
+    </div>
+    <div class="card-tilt" id="tilt"><img src="https://www.gelateriaromana.com/source/card.png" alt="La Romana Card"></div>
+  </div>
+</section>
+
+<!-- ============ SOCIAL ============ -->
+<section class="social wrap">
+  <h2 data-reveal>Siamo social! Seguici</h2>
+  <ul data-reveal>
+    <li><a href="https://it-it.facebook.com/GelateriaLaRomana">Facebook</a></li>
+    <li><a href="https://twitter.com/gelateriaromana">X</a></li>
+    <li><a href="https://www.pinterest.com/laromanadal1947/">Pinterest</a></li>
+    <li><a href="https://instagram.com/gelaterialaromana/">Instagram</a></li>
+  </ul>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <img class="foot-logo" src="https://www.gelateriaromana.com/source/logo-footer.png" alt="La Romana dal 1947">
+    <address>
+      <p class="menu-label">Sede operativa</p>
+      Via Marecchiese 314, angolo via Montese 2<br>
+      47923 Rimini (Rn)<br>
+      Tel. <a href="tel:+390541384520">+39 0541/384520</a> - Fax +39 0541/393658<br>
+      <a href="mailto:gelateriaromana@gelateriaromana.com">gelateriaromana@gelateriaromana.com</a>
+    </address>
+    <address>
+      <p class="menu-label">Sede legale</p>
+      Viale Regina Margherita, 86<br>
+      47924 Rimini (RN)
+    </address>
+    <p class="legal">
+      <a href="#privacy">Privacy &amp; Cookie Policy</a><br>
+      <a href="#">Preferenze Cookie</a><br>
+      <a href="#policy">P.Iva 04420850408</a><br>
+      <button data-open="fea">Informativa FEA OTP</button><br>
+      <button data-open="iso">Certificazione ISO 22000:2018</button>
+    </p>
+  </div>
+</footer>
+
+<!-- ============ POPUP ISO ============ -->
+<dialog id="iso">
+  <form method="dialog"><button class="close" aria-label="Chiudi">×</button></form>
+  <h3>La nostra certificazione ISO 22000:2018</h3>
+  <p>La Sicurezza Igienica degli alimenti de La Romana, risponde perfettamente alle attuali esigenze del settore alimentare. La certificazione ISO 22000:2018 conferma il rispetto delle norme che regolano la filiera agroalimentare.</p>
+  <p class="iso-imgs"><img src="https://www.gelateriaromana.com/source/iso-2.png" alt="Certificazione ISO"><img src="https://www.gelateriaromana.com/source/iso-1.png" alt="Certificazione ISO"></p>
+</dialog>
+
+<!-- ============ POPUP FEA OTP ============ -->
+<dialog id="fea">
+  <form method="dialog"><button class="close" aria-label="Chiudi">×</button></form>
+  <h3>Informativa FEA OTP</h3>
+  <p><strong>Caratteristiche tecnologiche del servizio realizzato da La Romana dal 1947 Srl per l’uso della Firma Elettronica Avanzata</strong> (ai sensi dell’art. 57, co. 1, lett. e) delle Regole tecniche del 22 febbraio 2013, G.U. n. 117 del 21.05.2013).</p>
+  <!-- INCOLLA QUI il testo completo dei punti 01-12 dell'informativa dal sito originale -->
+  <ol>
+    <li>Caratteristiche del servizio che garantiscono l’identificazione del firmatario</li>
+    <li>Connessione univoca della firma al firmatario</li>
+    <li>Controllo esclusivo del firmatario sul sistema di generazione della firma</li>
+    <li>Possibilità di verificare che il documento non abbia subito modifiche dopo la firma</li>
+    <li>Possibilità per il firmatario di ottenere evidenza di quanto sottoscritto</li>
+    <li>Individuazione del soggetto erogatore della soluzione di FEA</li>
+    <li>Assenza di elementi idonei a modificare atti, fatti e dati sottoscritti</li>
+    <li>Connessione univoca della firma al documento sottoscritto</li>
+    <li>Modalità per richiedere copia gratuita del modulo di adesione (ufficiopersonale@romanagroup.com)</li>
+    <li>Modalità per richiedere le informazioni dei punti precedenti</li>
+    <li>Copertura assicurativa per responsabilità civile (polizza AIG del 15/07/2025)</li>
+    <li>Documenti firmabili: tutti quelli inerenti il rapporto di lavoro</li>
+  </ol>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>

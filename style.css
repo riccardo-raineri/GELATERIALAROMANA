@@ -8,6 +8,7 @@
   --ink:     #2a1b14;   /* testo e sfondi scuri (cacao) */
   --accent:  #d6455d;   /* colore d'accento (lampone) */
   --soft:    #dfe4cc;   /* riquadri e linee */
+  --nav-bg:  rgba(238,240,227,.72); /* sfondo nav bar (ultimo numero = trasparenza, 0 = invisibile, 1 = pieno) */
 
   /* FONT */
   --title:   "Lobster", cursive;            /* TITOLI */
@@ -41,7 +42,12 @@ h2{font-size:clamp(2.4rem,6vw,5rem)}
 
 /* ---------- HEADER ---------- */
 .top{position:fixed;inset:0 0 auto 0;z-index:30;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1rem;
-  padding:1.1rem var(--pad);color:#fff;mix-blend-mode:difference}
+  padding:1rem var(--pad);color:var(--ink);
+  background:var(--nav-bg);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);
+  border-bottom:1px solid rgba(42,27,20,.08);
+  transition:background .5s var(--ease),color .5s var(--ease),border-color .5s}
+/* con il menu aperto la barra diventa trasparente con testo chiaro */
+body.locked .top{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;color:var(--bg);border-color:transparent}
 .logo{font:400 1.9rem var(--title);text-decoration:none}
 .menu-btn{justify-self:end;font:400 1.4rem var(--sub);letter-spacing:.1em;padding:.4rem 0;position:relative}
 .quick{display:flex;gap:clamp(1rem,2.5vw,2.4rem)}
@@ -123,9 +129,13 @@ section{padding-block:clamp(4rem,10vw,9rem)}
 .sec-head p{font:400 1.6rem var(--sub);letter-spacing:.08em}
 .sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:3rem}
 .flavors{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.flavors li{aspect-ratio:3/4;border-radius:999px 999px 1.5rem 1.5rem;background:var(--c);display:grid;place-items:end center;
-  padding:2rem 1rem;font:400 2rem var(--sub);letter-spacing:.06em;text-align:center;transition:transform .8s var(--ease),border-radius .8s var(--ease)}
+.flavors li{position:relative;overflow:hidden;aspect-ratio:3/4;border-radius:999px 999px 1.5rem 1.5rem;background:var(--c);
+  transition:opacity var(--speed) var(--ease),transform .8s var(--ease),border-radius .8s var(--ease)}
 .flavors li:hover{transform:translateY(-.8rem);border-radius:1.5rem}
+.flavors img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.flavors li:hover img{transform:scale(1.07)}
+.flavors span{position:absolute;inset:auto 0 0 0;padding:2rem 1rem;text-align:center;font:400 2rem var(--sub);letter-spacing:.06em;line-height:1.1}
+.flavors img + span{color:#fff;background:linear-gradient(to top,rgba(42,27,20,.7),transparent)}
 
 .news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1.5rem,4vw,4rem)}
 .news a{text-decoration:none;display:grid;gap:1rem}
@@ -144,11 +154,13 @@ section{padding-block:clamp(4rem,10vw,9rem)}
   transition:transform .25s ease-out;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
 
 /* ---------- SOCIAL ---------- */
-.social ul{list-style:none;margin-top:2rem}
-.social a{display:block;font:400 clamp(2.4rem,7vw,6rem)/1.3 var(--title);text-decoration:none;border-top:1px solid var(--soft);
-  padding-block:.3em;transition:padding .6s var(--ease),color .3s}
-.social li:last-child a{border-bottom:1px solid var(--soft)}
-.social a:hover{padding-left:1.5rem;color:var(--accent)}
+.social ul{list-style:none;margin-top:2rem;display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--soft)}
+.social li + li{border-left:1px solid var(--soft)}
+.social a{display:flex;align-items:center;justify-content:center;gap:.8rem;padding:1.8rem .5rem;text-decoration:none;
+  font:400 clamp(1.1rem,2.3vw,2rem)/1 var(--title);transition:color .3s,background .5s var(--ease)}
+.social svg{width:1.3em;height:1.3em;flex:none;transition:transform .6s var(--ease)}
+.social a:hover{color:var(--accent);background:var(--soft)}
+.social a:hover svg{transform:translateY(-.2em) rotate(-10deg) scale(1.1)}
 
 /* ---------- FOOTER ---------- */
 .foot{padding-block:4rem;border-top:1px solid var(--soft);font-size:.95rem}
@@ -184,6 +196,8 @@ dialog ol{padding-left:1.2rem;display:grid;gap:.4rem}
   .flavors{grid-template-columns:1fr 1fr}.flavors li:nth-child(3){grid-column:1/-1;aspect-ratio:2/1;border-radius:999px}
   .foot-grid{grid-template-columns:1fr 1fr}
   .hero-title{bottom:16vh}
+  .social a{flex-direction:column;gap:.5rem;padding:1.4rem .2rem;font-size:1rem}
+  .social svg{width:1.8em;height:1.8em}
 }
 
 /* ---------- ACCESSIBILITÀ: niente movimento se l'utente lo disattiva ---------- */
